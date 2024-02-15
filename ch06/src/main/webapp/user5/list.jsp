@@ -53,7 +53,7 @@
 		<h3>user5 목록</h3>
 	
 		<a href="../1.jdbc.jsp">처음으로</a>
-		<a href="./list.jsp">등록하기</a>
+		<a href="./register.jsp">등록하기</a>
 		<table border="1">
 			<tr>
 				<th>번호</th>
@@ -72,8 +72,8 @@
 				<td><%= dto.getAge() %></td>
 				<td><%= dto.getAddr() %></td>
 				<td>
-				<a href="./modify.jsp?uid=<%= dto.getSeq() %>">수정</a>
-				<a href="./delete.jsp?uid=<%= dto.getSeq() %>">삭제</a>
+				<a href="./modify.jsp?seq=<%= dto.getSeq() %>">수정</a>
+				<a href="./delete.jsp?seq=<%= dto.getSeq() %>">삭제</a>
 				</td>
 			</tr>
 			<% } %>

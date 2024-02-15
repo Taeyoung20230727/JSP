@@ -1,10 +1,9 @@
-
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>user4::list</title>
+		<title>user4::register</title>
 	</head>
 	<body>
 		<h3>user4 목록</h3>

@@ -6,6 +6,7 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%
+
 	request.setCharacterEncoding("UTF-8");
 	String uid = request.getParameter("uid");
 
@@ -27,12 +28,12 @@
 		ResultSet rs =psmt.executeQuery();
 		
 		if(rs.next()) {
-			dto = new User1DTO();
-			dto.setUid(rs.getString(1));
-			dto.setName(rs.getString(2));
-			dto.setHp(rs.getString(3));
-			dto.setAge(rs.getInt(4));
-			
+	dto = new User1DTO();
+	dto.setUid(rs.getString(1));
+	dto.setName(rs.getString(2));
+	dto.setHp(rs.getString(3));
+	dto.setAge(rs.getInt(4));
+	
 		}
 		
 		
@@ -44,7 +45,6 @@
 	}catch(Exception e){
 		e.printStackTrace();
 	}
-
 %>
 
 <!DOCTYPE html>

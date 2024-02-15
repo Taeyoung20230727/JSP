@@ -7,6 +7,7 @@
 <%@page import="java.sql.DriverManager"%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%
+
 	
 	String host = "jdbc:mysql://127.0.0.1:3306/studydb";
 	String user = "qksrm5546";
@@ -21,16 +22,16 @@
 		
 		ResultSet rs = stmt.executeQuery("SELECT * FROM `User1`");
 		while(rs.next()) {
-			User1DTO dto = new User1DTO();
-			dto.setUid(rs.getString(1));
-			dto.setName(rs.getString(2));
-			dto.setHp(rs.getString(3));
-			dto.setAge(rs.getInt(4));
-			
-			users.add(dto);
-			
+	User1DTO dto = new User1DTO();
+	dto.setUid(rs.getString(1));
+	dto.setName(rs.getString(2));
+	dto.setHp(rs.getString(3));
+	dto.setAge(rs.getInt(4));
+	
+	users.add(dto);
+	
 		
-			
+	
 		}
 		
 		rs.close();
@@ -40,7 +41,6 @@
 	}catch(Exception e){
 		e.printStackTrace();
 	}
-
 %>
 
 <!DOCTYPE html>
@@ -62,7 +62,10 @@
 				<th>나이</th>
 				<th>관리</th>
 			</tr>
-			<% for(User1DTO dto : users) { %>
+			<%
+			
+			 for(User1DTO dto : users) {
+			%>
 			
 			<tr>
 				<td><%=dto.getUid() %></td>
